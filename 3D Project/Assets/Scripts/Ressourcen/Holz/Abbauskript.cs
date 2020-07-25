@@ -16,7 +16,7 @@ public class Abbauskript : MonoBehaviour
                 
                 if (PlayerController.rayCast.collider == Tree)
                 {
-                    Debug.Log(baumleben.Leben);
+                    //Debug.Log(baumleben.Leben);
                     baumleben.Leben -= 1;
                 }
             }
@@ -27,8 +27,9 @@ public class Abbauskript : MonoBehaviour
     {
         if(baumleben.Leben <= 0)
         {
-            SaveData.currnet.DATA.holz += 5;
+            SaveData.currnet.holz += 5;
             Destroy(transform.parent.gameObject);
+            
         }
     }
 }

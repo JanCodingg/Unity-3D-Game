@@ -7,8 +7,8 @@ using UnityEngine;
 public class PlayerData
 {
     
-    public Vector3 position = Vector3.zero;
-    public Vector3 rotation = Vector3.zero;
+    //public Vector3 position = Vector3.zero;
+    //public Vector3 rotation = Vector3.zero;
 
     public int holz = 0;
     public int stein = 0;

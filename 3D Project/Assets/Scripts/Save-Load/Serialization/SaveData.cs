@@ -26,7 +26,9 @@ public class SaveData
         }
     }
 
-    public PlayerData DATA;
+    public int holz = 0;
+    public int stein = 0;
+    public int eisen = 0;
 
 
 }

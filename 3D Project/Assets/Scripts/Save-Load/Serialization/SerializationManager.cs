@@ -25,7 +25,8 @@ public class SerializationManager : MonoBehaviour
 
     public static object Load(string path)
     {
-        if(!File.Exists(path))
+        path = Application.persistentDataPath + "/saves/" + path + ".save";
+        if (!File.Exists(path))
         {
             return null;
         }

@@ -8,17 +8,20 @@ public class HolzText : MonoBehaviour
 {
     public TextMeshProUGUI holztext;
     
+    
     // Start is called before the first frame update
     private void Awake()
     {
         holztext = GetComponent<TextMeshProUGUI>();
-        SaveData.currnet = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.save");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        holztext.text = "Wood: " + SaveData.currnet.DATA.holz + "   Stein: " + SaveData.currnet.DATA.stein + "   Eisen: " + SaveData.currnet.DATA.eisen;
+            holztext.text = "Wood: " + SaveData.currnet.holz + "   Stein: " + SaveData.currnet.stein + "   Eisen: " + SaveData.currnet.eisen;
+        
+        
     }
 }

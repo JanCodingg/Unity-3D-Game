@@ -25,8 +25,9 @@ public class SteinAbbau : MonoBehaviour
     {
         if (SteinLeben.Leben <= 0)
         {
-            SaveData.currnet.DATA.stein += 5;
+            SaveData.currnet.stein += 5;
             Destroy(transform.parent.gameObject);
+            
         }
     }
 }
