@@ -12,8 +12,11 @@ public class MauerUpgrade : MonoBehaviour
 
     private bool InReichweiteZumUpgraden;
 
-    public Canvas resAndButtonAnzeige;
     public Transform Player;
+
+    public static bool allesgut = false;
+
+    
         // Start is called before the first frame update
     void Start()
     {
@@ -23,27 +26,19 @@ public class MauerUpgrade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ZeigeBenötigteRessourcen();
+        allesgut = ZeigeBenötigteRessourcen();
     }
 
-    private void ZeigeBenötigteRessourcen()
+    public bool ZeigeBenötigteRessourcen()
     {
+        
         if(PlayerController.rayCast.collider == WallCollider && InReichweiteZumUpgraden == true)
         {
-            resAndButtonAnzeige.enabled = true;
-            //Anzeigen der Ressourcen
-            //resAndButtonAnzeige.transform.rotation = Quaternion.RotateTowards(resAndButtonAnzeige.transform.rotation, Player.rotation, 360);
-            //Anzeigen des zu drückenden Knopfes
-
-            if(Input.GetKeyDown(KeyCode.Q))
-            {
-                //Upgrade
-            }
+            
+            return true;
         }
-        else
-        {
-            resAndButtonAnzeige.enabled = false;
-        }
+        return false;
+        
     }
 
     private void OnTriggerStay(Collider other)
