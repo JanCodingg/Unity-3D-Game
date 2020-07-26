@@ -6,7 +6,7 @@ using UnityEngine;
 public class MauerEigenschaft
 {
     internal int MauerLVL = 0;
-    internal
+    internal int MaxMauerLVL = 10;
     // Start is called before the first frame update
     void Start()
     {

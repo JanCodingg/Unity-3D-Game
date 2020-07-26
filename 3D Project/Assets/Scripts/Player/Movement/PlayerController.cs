@@ -19,11 +19,6 @@ public class PlayerController : MonoBehaviour
     public static RaycastHit rayCastLeftClick;
     public static RaycastHit rayCast;
 
-
-
-
-
-
     // Update is called once per frame
     void Update()
     {
@@ -31,9 +26,7 @@ public class PlayerController : MonoBehaviour
         Gravitaiton();
         Jump();
         TastaturControlle();
-
-        
-         Raycast();
+        Raycast();
         
     }
 

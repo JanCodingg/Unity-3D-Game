@@ -25,11 +25,17 @@ public class Abbauskript : MonoBehaviour
 
     private void Update()
     {
+        
         if(baumleben.Leben <= 0)
         {
             SaveData.currnet.holz += 5;
             Destroy(transform.parent.gameObject);
             
         }
+    }
+
+    private void Abbauen()
+    {
+
     }
 }
