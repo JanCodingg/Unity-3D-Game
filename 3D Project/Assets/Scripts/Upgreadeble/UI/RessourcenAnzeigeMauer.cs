@@ -11,8 +11,6 @@ public class RessourcenAnzeigeMauer : MonoBehaviour
     
     public Canvas canvas;
 
-    private float offset = 5;
-
     public GameObject Player;
     public TextMeshProUGUI AnzeigeText;
     public BoxCollider WallCollider;

@@ -6,21 +6,6 @@ public class SteinAbbau : MonoBehaviour
 {
     public MeshCollider Rock;
     private SteinLebe SteinLeben = new SteinLebe();
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.name == "Player")
-        {
-            if (Input.GetMouseButton(0))
-            {
-                if (PlayerController.rayCast.collider == Rock)
-                {
-                    Debug.Log(SteinLeben.Leben);
-                    SteinLeben.Leben -= 1;
-                }
-            }
-        }
-    }
-
     private void Update()
     {
         if (SteinLeben.Leben <= 0)
@@ -28,6 +13,14 @@ public class SteinAbbau : MonoBehaviour
             SaveData.currnet.stein += 5;
             Destroy(transform.parent.gameObject);
             
+        }
+        Abbauen();
+    }
+    private void Abbauen()
+    {
+        if (PlayerController.rayCast.distance < 10 && PlayerController.rayCast.collider == Rock && Input.GetMouseButton(0))
+        {
+            SteinLeben.Leben -= 1;
         }
     }
 }

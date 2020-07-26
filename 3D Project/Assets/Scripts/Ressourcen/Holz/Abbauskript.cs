@@ -7,21 +7,7 @@ public class Abbauskript : MonoBehaviour
 {
     public MeshCollider Tree;
     private BaumLeben baumleben = new BaumLeben();
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.name == "Player")
-        {
-            if (Input.GetMouseButton(0))
-            {
-                
-                if (PlayerController.rayCast.collider == Tree)
-                {
-                    //Debug.Log(baumleben.Leben);
-                    baumleben.Leben -= 1;
-                }
-            }
-        }
-    }
+    
 
     private void Update()
     {
@@ -32,10 +18,14 @@ public class Abbauskript : MonoBehaviour
             Destroy(transform.parent.gameObject);
             
         }
+        Abbauen();
     }
 
     private void Abbauen()
     {
-
+        if (PlayerController.rayCast.distance < 10 && PlayerController.rayCast.collider == Tree && Input.GetMouseButton(0))
+        {
+            baumleben.Leben -= 1;
+        }
     }
 }
