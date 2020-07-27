@@ -30,5 +30,5 @@ public class SaveData
     public int stein = 0;
     public int eisen = 0;
 
-    public MauerEigenschaft mauer;
+    
 }
