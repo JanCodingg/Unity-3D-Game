@@ -7,11 +7,15 @@ public class UpgradeBaseKlass : MonoBehaviour
     private bool canIUpgrade { get; set; }
     public void CanIUpgrade(int currentLVL, int maxLVL, RaycastHit Ray, BoxCollider upgradeCollider, float Upgradedistance)
     {
-        if(currentLVL < maxLVL && Ray.collider == upgradeCollider && Upgradedistance <= Ray.distance)
+        
+        if(currentLVL < maxLVL && Ray.collider == upgradeCollider && Upgradedistance >= Ray.distance)
         {
             canIUpgrade = true;
         }
-        canIUpgrade = false;
+        else
+        {
+            canIUpgrade = false;
+        }
     }
 
     public void SwitchObject(GameObject[] mauerLevels, int currentLVL)
@@ -19,6 +23,7 @@ public class UpgradeBaseKlass : MonoBehaviour
         
         if(canIUpgrade)
         {
+            Debug.Log("isUpgrading");
             currentLVL++;
             for (int i = 0; i < mauerLevels.Length; i++)
             {

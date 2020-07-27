@@ -6,9 +6,9 @@ using UnityEngine.UIElements;
 public class UpgradeSkript : UpgradeBaseKlass
 {
     public BoxCollider WallCollider;
-    private int currentLVL;
-    private int maxLVL;
-    private float upgradeDistance;
+    private int currentLVL = 0;
+    private int maxLVL = 2;
+    private float upgradeDistance = 10;
     public GameObject[] WallLevels;
     
     // Start is called before the first frame update
@@ -20,10 +20,11 @@ public class UpgradeSkript : UpgradeBaseKlass
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.E))
         {
             CanIUpgrade(currentLVL, maxLVL, PlayerController.rayCast, WallCollider, upgradeDistance);
             SwitchObject(WallLevels, currentLVL);
+            
         }
         
         
