@@ -13,20 +13,25 @@ public class RessourcenAnzeigeMauer : MonoBehaviour
 
     public GameObject Player;
     public TextMeshProUGUI AnzeigeText;
-    public BoxCollider WallCollider;
+    public BoxCollider[] WallCollider;
+    private int currentLVL;
     // Start is called before the first frame update
     void Start()
     {
         camera = Camera.main;
         Player = GameObject.FindGameObjectWithTag("Player");
         canvas.GetComponent<Canvas>();
+        AnzeigeText.GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if(PlayerController.rayCast.collider == WallCollider && PlayerController.rayCast.distance < 10)
+         currentLVL = SaveData.currnet.Mauer1.currentLVL;
+        
+
+        if(PlayerController.rayCast.collider == WallCollider[currentLVL] && PlayerController.rayCast.distance < 10)
         {
             MoveAndRotate();
             
