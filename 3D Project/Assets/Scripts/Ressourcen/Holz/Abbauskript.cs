@@ -14,7 +14,7 @@ public class Abbauskript : MonoBehaviour
         
         if(baumleben.Leben <= 0)
         {
-            SaveData.currnet.holz += 5;
+            SaveData.currnet.PlayerData.holz += 5;
             Destroy(transform.gameObject);
             
         }
@@ -27,7 +27,7 @@ public class Abbauskript : MonoBehaviour
 
     private void Abbauen()
     {
-        if (PlayerController.rayCast.distance < 10 && PlayerController.rayCast.collider == Tree && Input.GetMouseButton(0))
+        if (PlayerController.rayCast.distance < 2 && PlayerController.rayCast.collider == Tree && Input.GetMouseButton(0))
         {
             baumleben.Leben -= 1;
         }

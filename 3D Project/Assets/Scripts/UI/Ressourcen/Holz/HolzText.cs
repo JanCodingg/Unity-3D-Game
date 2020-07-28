@@ -20,7 +20,7 @@ public class HolzText : MonoBehaviour
     void Update()
     {
         
-            holztext.text = "Wood: " + SaveData.currnet.holz + "   Stein: " + SaveData.currnet.stein + "   Eisen: " + SaveData.currnet.eisen;
+            holztext.text = "Wood: " + SaveData.currnet.PlayerData.holz + "   Stein: " + SaveData.currnet.PlayerData.stein + "   Eisen: " + SaveData.currnet.PlayerData.eisen;
         
         
     }

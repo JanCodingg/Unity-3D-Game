@@ -10,7 +10,7 @@ public class SteinAbbau : MonoBehaviour
     {
         if (SteinLeben.Leben <= 0)
         {
-            SaveData.currnet.stein += 5;
+            SaveData.currnet.PlayerData.stein += 5;
             Destroy(transform.gameObject);
             
         }

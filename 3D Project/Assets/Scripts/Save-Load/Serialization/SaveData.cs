@@ -26,9 +26,10 @@ public class SaveData
         }
     }
 
-    public int holz = 0;
-    public int stein = 0;
-    public int eisen = 0;
 
-    
+    public PlayerData PlayerData = new PlayerData();
+    public Mauer Mauer1 = new Mauer();
+    public Mauer Mauer2 = new Mauer();
+    public Mauer Mauer3 = new Mauer();
+    public Mauer Mauer4 = new Mauer();
 }

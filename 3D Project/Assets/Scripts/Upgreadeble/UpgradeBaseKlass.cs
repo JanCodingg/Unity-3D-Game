@@ -23,13 +23,14 @@ public class UpgradeBaseKlass : MonoBehaviour
         
         if(canIUpgrade)
         {
-            Debug.Log("isUpgrading");
+            
             currentLVL++;
             for (int i = 0; i < mauerLevels.Length; i++)
             {
                 mauerLevels[i].SetActive(false);
             }
             mauerLevels[currentLVL].SetActive(true);
+            
         }
     }
 }
