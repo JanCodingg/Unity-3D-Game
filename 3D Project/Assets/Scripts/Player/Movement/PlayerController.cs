@@ -19,15 +19,26 @@ public class PlayerController : MonoBehaviour
     public static RaycastHit rayCastLeftClick;
     public static RaycastHit rayCast;
 
+    private int GroundLayermask = 9;
     // Update is called once per frame
     void Update()
     {
+       
         velocity = Vector3.zero;
         Gravitaiton();
         Jump();
         TastaturControlle();
         Raycast();
         
+    }
+
+    bool GroundCheck()
+    {
+        RaycastHit hit;
+        Physics.SphereCast(transform.position, 0.4f, new Vector3(0, 3, 0), GroundLayermask, QueryTriggerInteraction.Ignore);
+        
+
+
     }
 
     void TastaturControlle()
