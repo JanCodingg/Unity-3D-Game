@@ -34,6 +34,6 @@ public class UpgradeSkript : UpgradeBaseKlass
                 SaveData.currnet.Mauer1.currentLVL++;
             }
         }
-        Debug.Log(SaveData.currnet.Mauer1.currentLVL);
+        //Debug.Log(SaveData.currnet.Mauer1.currentLVL);
     }
 }

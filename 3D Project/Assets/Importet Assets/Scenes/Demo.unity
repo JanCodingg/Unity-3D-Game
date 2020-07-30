@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 39353079}
   - component: {fileID: 39353078}
   - component: {fileID: 39353077}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Mauer_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1091,7 +1091,7 @@ GameObject:
   - component: {fileID: 165134855}
   - component: {fileID: 165134854}
   - component: {fileID: 165134853}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Mauer_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2081,7 +2081,7 @@ GameObject:
   - component: {fileID: 294752253}
   - component: {fileID: 294752252}
   - component: {fileID: 294752251}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Mauer_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2426,7 +2426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 341460439}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3469,7 +3469,7 @@ GameObject:
   - component: {fileID: 478207508}
   - component: {fileID: 478207510}
   - component: {fileID: 478207509}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4096,7 +4096,7 @@ GameObject:
   - component: {fileID: 534669903}
   - component: {fileID: 534669907}
   - component: {fileID: 534669906}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4338,7 +4338,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &561032923
@@ -4856,7 +4856,7 @@ GameObject:
   - component: {fileID: 611262107}
   - component: {fileID: 611262106}
   - component: {fileID: 611262105}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Rackete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5614,7 +5614,7 @@ GameObject:
   - component: {fileID: 712112270}
   - component: {fileID: 712112269}
   - component: {fileID: 712112268}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Mauer_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6351,7 +6351,7 @@ GameObject:
   - component: {fileID: 918008256}
   - component: {fileID: 918008255}
   - component: {fileID: 918008254}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Mauer_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7765,7 +7765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1173457038}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: MauerNR.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11094,7 +11094,7 @@ GameObject:
   - component: {fileID: 1705174337}
   - component: {fileID: 1705174336}
   - component: {fileID: 1705174335}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: CanvasAnzeige
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11215,7 +11215,7 @@ GameObject:
   - component: {fileID: 1706132790}
   - component: {fileID: 1706132789}
   - component: {fileID: 1706132788}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Mauer_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12356,7 +12356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1895294405}
   - component: {fileID: 1895294406}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Mauern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12510,7 +12510,7 @@ GameObject:
   - component: {fileID: 1929703349}
   m_Layer: 9
   m_Name: Umgebung
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12965,7 +12965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021909778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.97, z: 13.27}
+  m_LocalPosition: {x: 0.05, y: 6.14, z: -0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 534669905}

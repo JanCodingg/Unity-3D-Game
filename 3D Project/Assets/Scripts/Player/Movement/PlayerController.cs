@@ -29,16 +29,27 @@ public class PlayerController : MonoBehaviour
         Jump();
         TastaturControlle();
         Raycast();
-        
+        Debug.Log(GroundCheck());
     }
 
     bool GroundCheck()
     {
         RaycastHit hit;
-        Physics.SphereCast(transform.position, 0.4f, new Vector3(0, 3, 0), GroundLayermask, QueryTriggerInteraction.Ignore);
-        
+        if (Physics.SphereCast(transform.position + new Vector3(0, 0, 0), 0.4f, new Vector3(0, -0.85f, 0), out hit, 10f))
+        {
+            Debug.Log(hit.collider.gameObject.layer);
+            Debug.Log(hit.collider.name);
+            if(hit.collider.gameObject.layer == 9)
+            {
 
-
+                return true;
+            }
+        }
+        return false;
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position + new Vector3(0, -0.85f, 0), 0.4f);
     }
 
     void TastaturControlle()
@@ -57,7 +68,7 @@ public class PlayerController : MonoBehaviour
     void Gravitaiton()
     {
         float zeitInLuft = 0;
-        if (controller.isGrounded)
+        if (GroundCheck())
         {
             zeitInLuft = Time.time;
             verticalVelocity = -0.5f;
@@ -66,15 +77,15 @@ public class PlayerController : MonoBehaviour
         {
             float zeit = Time.time - zeitInLuft;
             //Formel für Gravitaion: y = 1/2 * G * Zeit hoch 2
-            verticalVelocity += gravity * Time.deltaTime;
+            verticalVelocity += gravity * Time.deltaTime * zeit;
         }
     }
 
     void Jump()
     {
-        if(Input.GetButtonDown("Jump") && controller.isGrounded)
+        if(Input.GetButtonDown("Jump") && GroundCheck())
         {
-            verticalVelocity = Mathf.Sqrt(sprungHöhe * -2 * gravity);
+            verticalVelocity = Mathf.Sqrt(sprungHöhe * gravity - 2);
         }
     }
 
