@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Variablen für die Bewegung
     public float speed = 5;
-    private float gravity = -14f;
+    private float gravity = 16f;
     public float sprungHöhe = 3f;
     public float verticalVelocity;
 
@@ -15,11 +16,23 @@ public class PlayerController : MonoBehaviour
 
     Vector3 velocity;
 
+    //Raycast für das Fadenkreuz
     public static bool hitbool = false;
     public static RaycastHit rayCastLeftClick;
     public static RaycastHit rayCast;
 
-    private int GroundLayermask = 9;
+    //Variablen für GroundCheck
+    public LayerMask groundmask;
+    public float shereRadius = 0.3f;
+    public Transform groundCheck;
+
+    void Start()
+    {
+        //groundCheck.Find("SpherePos").GetComponentInChildren<Transform>();
+        groundmask = LayerMask.GetMask("Ground");
+        //shereRadius = controller.radius - 0.2f;
+
+    }
     // Update is called once per frame
     void Update()
     {
@@ -29,27 +42,20 @@ public class PlayerController : MonoBehaviour
         Jump();
         TastaturControlle();
         Raycast();
-        Debug.Log(GroundCheck());
+        
     }
 
     bool GroundCheck()
     {
-        RaycastHit hit;
-        if (Physics.SphereCast(transform.position + new Vector3(0, 0, 0), 0.4f, new Vector3(0, -0.85f, 0), out hit, 10f))
+        if(Physics.CheckSphere(groundCheck.position, shereRadius, groundmask))
         {
-            Debug.Log(hit.collider.gameObject.layer);
-            Debug.Log(hit.collider.name);
-            if(hit.collider.gameObject.layer == 9)
-            {
-
-                return true;
-            }
+            return true;
         }
         return false;
     }
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position + new Vector3(0, -0.85f, 0), 0.4f);
+        Gizmos.DrawWireSphere(groundCheck.position, shereRadius);
     }
 
     void TastaturControlle()
@@ -62,29 +68,34 @@ public class PlayerController : MonoBehaviour
         velocity.y = verticalVelocity;
         velocity = transform.TransformDirection(velocity);
         controller.Move(velocity * Time.deltaTime);
+        
 
     }
-
+    private float zeitInLuft;
+    private float zeit;
     void Gravitaiton()
     {
-        float zeitInLuft = 0;
-        if (GroundCheck())
+        Debug.Log("Grounded: " + GroundCheck());
+        Debug.Log("velocity: " + verticalVelocity);
+        if (GroundCheck() == true && verticalVelocity < 0)
         {
             zeitInLuft = Time.time;
-            verticalVelocity = -0.5f;
+            verticalVelocity = -0.1f;
         }
         else
         {
-            float zeit = Time.time - zeitInLuft;
+            zeit = Time.time - zeitInLuft;
             //Formel für Gravitaion: y = 1/2 * G * Zeit hoch 2
-            verticalVelocity += gravity * Time.deltaTime * zeit;
+            verticalVelocity += gravity * Time.deltaTime * zeit * -1;
         }
     }
 
     void Jump()
     {
-        if(Input.GetButtonDown("Jump") && GroundCheck())
+        if(Input.GetButtonDown("Jump") && GroundCheck() == true)
         {
+            zeitInLuft = Time.time;
+            verticalVelocity = -0.1f;
             verticalVelocity = Mathf.Sqrt(sprungHöhe * gravity - 2);
         }
     }

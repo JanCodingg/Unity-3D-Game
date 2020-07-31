@@ -2162,6 +2162,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294752249}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &307178077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 307178078}
+  m_Layer: 0
+  m_Name: SpherePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &307178078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307178077}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.834, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2021909779}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &314806399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4327,8 +4357,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &561032922
-MeshCollider:
+--- !u!65 &561032922
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4337,10 +4367,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &561032923
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11114,7 +11143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1705174338}
-  Player: {fileID: 0}
+  Player: {fileID: 2021909778}
   AnzeigeText: {fileID: 478207509}
   WallCollider:
   - {fileID: 1706132788}
@@ -12970,6 +12999,7 @@ Transform:
   m_Children:
   - {fileID: 534669905}
   - {fileID: 901125142}
+  - {fileID: 307178078}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12989,6 +13019,11 @@ MonoBehaviour:
   "sprungH\xF6he": 1.5
   verticalVelocity: 0
   controller: {fileID: 2021909781}
+  groundmask:
+    serializedVersion: 2
+    m_Bits: 0
+  shereRadius: 0.4
+  groundCheck: {fileID: 307178078}
 --- !u!143 &2021909781
 CharacterController:
   m_ObjectHideFlags: 0
