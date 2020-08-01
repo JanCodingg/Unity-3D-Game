@@ -75,8 +75,6 @@ public class PlayerController : MonoBehaviour
     private float zeit;
     void Gravitaiton()
     {
-        Debug.Log("Grounded: " + GroundCheck());
-        Debug.Log("velocity: " + verticalVelocity);
         if (GroundCheck() == true && verticalVelocity < 0)
         {
             zeitInLuft = Time.time;
