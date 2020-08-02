@@ -1,39 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class UpgradeSkript : UpgradeBaseKlass
+public class UpgradeMauer1 : UpgradeBaseKlass
 {
-    public BoxCollider WallCollider;
+    private BoxCollider WallCollider;
     private int currentLVL;
     private int maxLVL;
     private float upgradeDistance = 10;
-    public GameObject[] WallLevels;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public static GameObject[] WallLevels;
+    public GameObject[] walls;
     // Update is called once per frame
+    private void Start()
+    {
+        WallLevels = walls;
+    }
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            
+
             currentLVL = SaveData.currnet.Mauer1.currentLVL;
             maxLVL = SaveData.currnet.Mauer1.maxLVL;
             WallCollider = WallLevels[currentLVL].GetComponent<BoxCollider>();
             CanIUpgrade(currentLVL, maxLVL, PlayerController.rayCast, WallCollider, upgradeDistance);
             SwitchObject(WallLevels, currentLVL);
-            if(currentLVL < maxLVL)
+            if (canIUpgrade)
             {
                 SaveData.currnet.Mauer1.currentLVL++;
             }
+            
         }
-        //Debug.Log(SaveData.currnet.Mauer1.currentLVL);
     }
 }

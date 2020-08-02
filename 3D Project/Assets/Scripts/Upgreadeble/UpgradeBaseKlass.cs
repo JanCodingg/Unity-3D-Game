@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UpgradeBaseKlass : MonoBehaviour
 {
-    private bool canIUpgrade { get; set; }
+    internal bool canIUpgrade { get; set; }
     public void CanIUpgrade(int currentLVL, int maxLVL, RaycastHit Ray, BoxCollider upgradeCollider, float Upgradedistance)
     {
         

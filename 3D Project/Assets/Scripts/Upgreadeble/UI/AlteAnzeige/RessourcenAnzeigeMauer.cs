@@ -8,9 +8,7 @@ using TMPro;
 public class RessourcenAnzeigeMauer : MonoBehaviour
 {
     private Camera camera;
-    
     public Canvas canvas;
-
     public GameObject Player;
     public TextMeshProUGUI AnzeigeText;
     public BoxCollider[] WallCollider;
