@@ -2365,7 +2365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &293518139
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6856,7 +6856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &851593535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9485,6 +9485,13 @@ MonoBehaviour:
   - {fileID: 293518138}
   - {fileID: 851593534}
   - {fileID: 1762489534}
+  Mauer:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1279458904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13088,7 +13095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1762489535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14506,7 +14513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1930945516
 RectTransform:
   m_ObjectHideFlags: 0

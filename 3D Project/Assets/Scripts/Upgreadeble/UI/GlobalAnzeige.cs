@@ -9,7 +9,7 @@ public class GlobalAnzeige : MonoBehaviour
     public GameObject[] MauerText = new GameObject[4];
     //Alle Collider werden hier beschrieben
     public GameObject[][] MauerCollider = new GameObject[4][];
-    
+    public GameObject[] Mauer = new GameObject[6];
 
     // Start is called before the first frame update
     private void Start()
@@ -20,13 +20,16 @@ public class GlobalAnzeige : MonoBehaviour
         MauerCollider[2] = UpgradeMauer3.WallLevels;
         MauerCollider[3] = UpgradeMauer4.WallLevels;
 
+        Mauer = UpgradeMauer1.WallLevels;
+
     }
     // Update is called once per frame
     void Update()
     {
+        
         for (int i = 0; i < MauerCollider.Length; i++)
         {
-            for (int e = 0; e < MauerCollider[i].Length; e++)
+            for (int e = 0; e < 6; e++)
             {
                 if(PlayerController.rayCast.collider == MauerCollider[i][e].GetComponent<BoxCollider>() && PlayerController.rayCast.distance < 10)
                 {
