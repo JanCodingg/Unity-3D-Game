@@ -9485,13 +9485,6 @@ MonoBehaviour:
   - {fileID: 293518138}
   - {fileID: 851593534}
   - {fileID: 1762489534}
-  Mauer:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &1279458904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12745,7 +12738,7 @@ GameObject:
   - component: {fileID: 1706132789}
   - component: {fileID: 1706132788}
   m_Layer: 9
-  m_Name: Mauer_0
+  m_Name: Mauer_0_test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

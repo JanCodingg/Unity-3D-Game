@@ -10,8 +10,8 @@ public class UpgradeMauer4 : UpgradeBaseKlass
     private float upgradeDistance = 10;
     public static GameObject[] WallLevels;
     public GameObject[] walls;
-    // Update is called once per frame
-    private void Start()
+    
+    private void Awake()
     {
         WallLevels = walls;
     }
