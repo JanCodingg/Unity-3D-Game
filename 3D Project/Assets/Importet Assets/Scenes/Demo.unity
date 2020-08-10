@@ -7166,7 +7166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da64f0ebbdd2074086108777d212af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WelcheMauer: 4
+  WelcheMauer: 3
 --- !u!1 &901125138
 GameObject:
   m_ObjectHideFlags: 0
@@ -10926,7 +10926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da64f0ebbdd2074086108777d212af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WelcheMauer: 2
+  WelcheMauer: 1
 --- !u!1001 &1506853577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11354,7 +11354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da64f0ebbdd2074086108777d212af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WelcheMauer: 3
+  WelcheMauer: 2
 --- !u!1001 &1546845707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14452,7 +14452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da64f0ebbdd2074086108777d212af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WelcheMauer: 1
+  WelcheMauer: 0
 --- !u!1001 &1915857408
 PrefabInstance:
   m_ObjectHideFlags: 0
