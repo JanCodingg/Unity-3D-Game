@@ -8,19 +8,14 @@ public class GlobalAnzeige : MonoBehaviour
     //Alle 4 Texte für die Mauern
     public GameObject[] MauerText = new GameObject[4];
     //Alle Collider werden hier beschrieben
-    public GameObject[][] MauerCollider = new GameObject[4][];
+    public GameObject[][] MauerCollider;
     //jetziger Text der angezeigt werden soll
     private int Textnummer;
     private int GetroffenerCollider;
     // Start is called before the first frame update
     private void Start()
     {
-        
-        MauerCollider[0] = UpgradeMauer1.WallLevels;
-        MauerCollider[1] = UpgradeMauer2.WallLevels;
-        MauerCollider[2] = UpgradeMauer3.WallLevels;
-        MauerCollider[3] = UpgradeMauer4.WallLevels;
-        
+        MauerCollider = MauerArray.mauerArray;
     }
     // Update is called once per frame
     void Update()

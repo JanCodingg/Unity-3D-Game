@@ -8,7 +8,9 @@ public class UpgradeBaseKlass : MonoBehaviour
     public void CanIUpgrade(int currentLVL, int maxLVL, RaycastHit Ray, BoxCollider upgradeCollider, float Upgradedistance)
     {
         
-        if(currentLVL < maxLVL && Ray.collider == upgradeCollider && Upgradedistance >= Ray.distance)
+        Debug.Log(Ray.collider == upgradeCollider);
+       
+        if(currentLVL < maxLVL && Ray.collider == upgradeCollider && Upgradedistance >= Ray.distance && SaveData.currnet.PlayerData.holz >= Stats.RessourceMauerArr[currentLVL, 0] && SaveData.currnet.PlayerData.stein >= Stats.RessourceMauerArr[currentLVL, 1] && SaveData.currnet.PlayerData.eisen >= Stats.RessourceMauerArr[currentLVL, 2])
         {
             canIUpgrade = true;
         }

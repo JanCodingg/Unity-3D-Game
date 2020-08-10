@@ -22,7 +22,7 @@ public class SteinAbbau : MonoBehaviour
     }
     private void Abbauen()
     {
-        if (PlayerController.rayCast.distance < 10 && PlayerController.rayCast.collider == Rock && Input.GetMouseButton(0))
+        if (PlayerController.rayCast.distance < 5 && PlayerController.rayCast.collider == Rock && Input.GetMouseButton(0))
         {
             SteinLeben.Leben -= 1;
         }

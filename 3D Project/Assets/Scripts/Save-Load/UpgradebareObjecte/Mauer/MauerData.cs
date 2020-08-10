@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ using UnityEngine;
 public class Mauer
 {
     
-    public int currentLVL = 0;
+    public int currentLVL;
     public int maxLVL = 5;
     public int Health = 0;
 

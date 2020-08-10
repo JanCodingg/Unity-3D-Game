@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    //Mauer maximal Level
-    public static int maxHealthByLVL1 = 100;
-    public static int maxHealthByLVL2 = 200;
-    public static int maxHealthByLVL3 = 350;
-    public static int maxHealthByLVL4 = 500;
-    public static int maxHealthByLVL5 = 770;
-    public static int maxHealthByLVL6 = 1000;
+    
+    public static readonly int[] MaxHealthMauerArr = new int[] { 100, 200, 350, 500, 770, 1000};
+    //Ressourcen Reihenfolge: Holz, Stein, Eisen
+    public static readonly int[,] RessourceMauerArr = new int[5, 3] { 
+    //Holz, Stein, Eisen
+        {30, 15, 0 },
+        {60, 30, 0 },
+        {120, 60, 0 },
+        {250, 150, 30 },
+        {500, 300, 100 }
+    };
+
 }
