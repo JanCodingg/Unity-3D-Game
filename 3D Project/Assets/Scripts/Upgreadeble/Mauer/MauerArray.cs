@@ -12,8 +12,7 @@ public class MauerArray : MonoBehaviour
     public static GameObject[][] mauerArray = new GameObject[4][];
     private void Awake()
     {
-        Debug.Log(Mauer1.Length);
-        Debug.Log(mauerArray.Length);
+        
         mauerArray[0] = Mauer1;
         mauerArray[1] = Mauer2;
         mauerArray[2] = Mauer3;

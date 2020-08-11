@@ -7,7 +7,7 @@ public class MauerText : MonoBehaviour
 {
     public TextMeshProUGUI Text;
     private int currentLVL;
-    public int WelcheMauer = 0;
+    public int WelcheMauer;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,20 +20,20 @@ public class MauerText : MonoBehaviour
     {
         switch(WelcheMauer)
         {
-            case 1:
+            case 0:
                 currentLVL = SaveData.currnet.Mauer1.currentLVL;
                 break;
-            case 2:
+            case 1:
                 currentLVL = SaveData.currnet.Mauer2.currentLVL;
                 break;
-            case 3:
+            case 2:
                 currentLVL = SaveData.currnet.Mauer3.currentLVL;
                 break;
-            case 4:
+            case 3:
                 currentLVL = SaveData.currnet.Mauer4.currentLVL;
                 break;
             default:
-                currentLVL = 0;
+                currentLVL = 6;
                 break;
         }
         

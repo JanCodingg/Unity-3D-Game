@@ -10,6 +10,8 @@ public class UpgradeMauer : UpgradeBaseKlass
     private float upgradeDistance = 10;
     public int WelcheMauer;
     
+
+    
     void Update()
     {
         switch (WelcheMauer)
@@ -36,23 +38,24 @@ public class UpgradeMauer : UpgradeBaseKlass
         {
             WallCollider = MauerArray.mauerArray[WelcheMauer][currentLVL].GetComponent<BoxCollider>();
             CanIUpgrade(currentLVL, maxLVL, PlayerController.rayCast, WallCollider, upgradeDistance);
-            Debug.Log("kann ich Upgraden" + canIUpgrade);
             SwitchObject(MauerArray.mauerArray[WelcheMauer], currentLVL);
             if (canIUpgrade)
             {
                 switch (WelcheMauer)
                 {
+                    case 0:
+                        Debug.Log(SaveData.currnet.Mauer1.currentLVL);
+                        ++SaveData.currnet.Mauer1.currentLVL;
+
+                        break;
                     case 1:
-                        SaveData.currnet.Mauer1.currentLVL++;
+                        ++SaveData.currnet.Mauer2.currentLVL;
                         break;
                     case 2:
-                        SaveData.currnet.Mauer2.currentLVL++;
+                        ++SaveData.currnet.Mauer3.currentLVL;
                         break;
                     case 3:
-                        SaveData.currnet.Mauer3.currentLVL++;
-                        break;
-                    case 4:
-                        SaveData.currnet.Mauer4.currentLVL++;
+                        ++SaveData.currnet.Mauer4.currentLVL;
                         break;
                 }
                 SaveData.currnet.PlayerData.holz -= Stats.RessourceMauerArr[currentLVL, 0];
