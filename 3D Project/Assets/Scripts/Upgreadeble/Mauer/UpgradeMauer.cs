@@ -33,20 +33,21 @@ public class UpgradeMauer : UpgradeBaseKlass
                 maxLVL = SaveData.currnet.Mauer4.maxLVL;
                 break;
         }
-        
+        SwitchObject(MauerArray.mauerArray[WelcheMauer], currentLVL);
+        Debug.Log(WelcheMauer);
         if (Input.GetKeyDown(KeyCode.E))
         {
             WallCollider = MauerArray.mauerArray[WelcheMauer][currentLVL].GetComponent<BoxCollider>();
             CanIUpgrade(currentLVL, maxLVL, PlayerController.rayCast, WallCollider, upgradeDistance);
-            SwitchObject(MauerArray.mauerArray[WelcheMauer], currentLVL);
+            //SwitchObject(MauerArray.mauerArray[WelcheMauer], currentLVL);
             if (canIUpgrade)
             {
+                Debug.Log("sachen ab ziehen");
                 switch (WelcheMauer)
                 {
                     case 0:
-                        Debug.Log(SaveData.currnet.Mauer1.currentLVL);
                         ++SaveData.currnet.Mauer1.currentLVL;
-
+                        Debug.Log(SaveData.currnet.Mauer1.currentLVL);
                         break;
                     case 1:
                         ++SaveData.currnet.Mauer2.currentLVL;
