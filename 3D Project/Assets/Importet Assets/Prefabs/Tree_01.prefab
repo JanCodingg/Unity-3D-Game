@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2222111361405018444}
   - component: {fileID: 2222111361403691372}
   - component: {fileID: 2222111361402594220}
-  - component: {fileID: 6601886996393371248}
   - component: {fileID: 3405641060916151943}
+  - component: {fileID: 7051853444395878059}
+  - component: {fileID: 5161525704478209009}
   m_Layer: 9
   m_Name: Tree_01
   m_TagString: Untagged
@@ -81,7 +82,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6601886996393371248
+--- !u!114 &3405641060916151943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222111361404534124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e0785a58db5c04ab0f916d3a0d4378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Baum: {fileID: 7051853444395878059}
+--- !u!64 &7051853444395878059
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,16 +109,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 6c7eaede4efc960409fb9ef2dfb77f29, type: 3}
---- !u!114 &3405641060916151943
-MonoBehaviour:
+--- !u!95 &5161525704478209009
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2222111361404534124}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77e0785a58db5c04ab0f916d3a0d4378, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Tree: {fileID: 6601886996393371248}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 333c38beed60b1944a0ffe3141cc7e57, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

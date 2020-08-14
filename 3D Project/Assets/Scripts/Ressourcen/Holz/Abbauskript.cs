@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class Abbauskript : MonoBehaviour
 {
-    public MeshCollider Tree;
+
+    public MeshCollider Baum;
     private BaumLeben baumleben = new BaumLeben();
-    
+    private int Baumleben = 20;
+    public Animator BaumAnimation;
 
     private void Update()
     {
         
-        if(baumleben.Leben <= 0)
+        if(Baumleben <= 0)
         {
+            
             SaveData.currnet.PlayerData.holz += 5;
             Destroy(transform.gameObject);
             
@@ -27,9 +30,9 @@ public class Abbauskript : MonoBehaviour
 
     private void Abbauen()
     {
-        if (PlayerController.rayCast.distance < 2 && PlayerController.rayCast.collider == Tree && Input.GetMouseButton(0))
+        if (PlayerController.rayCast.distance < 2 && PlayerController.rayCast.collider == Baum && Input.GetMouseButton(0))
         {
-            baumleben.Leben -= 1;
+            Baumleben -= 1;
         }
     }
 }
