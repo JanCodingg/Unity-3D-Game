@@ -27,9 +27,18 @@ public class GlobalAnzeige : MonoBehaviour
             {
                 if(PlayerController.rayCast.collider == MauerCollider[i][e].GetComponent<BoxCollider>() && PlayerController.rayCast.distance < 10)
                 {
+                    
                     MauerText[i].SetActive(true);
                     Textnummer = i;
                     GetroffenerCollider = e;
+                    foreach (GameObject Text in MauerText)
+                    {
+                        if(Text != MauerText[i])
+                        {
+                            Text.SetActive(false);
+                        }
+                    }
+
                 }
                 else
                 {

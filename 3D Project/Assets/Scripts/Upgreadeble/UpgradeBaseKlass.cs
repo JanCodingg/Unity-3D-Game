@@ -20,7 +20,6 @@ public class UpgradeBaseKlass : MonoBehaviour
 
     public void SwitchObject(GameObject[] mauerLevels, int currentLVL)
     {
-            Debug.Log("Level in Switch" + currentLVL);
             for (int i = 0; i < mauerLevels.Length; i++)
             {
                 mauerLevels[i].SetActive(false);

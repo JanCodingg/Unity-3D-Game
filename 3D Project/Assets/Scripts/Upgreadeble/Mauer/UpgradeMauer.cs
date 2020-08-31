@@ -34,7 +34,7 @@ public class UpgradeMauer : UpgradeBaseKlass
                 break;
         }
         SwitchObject(MauerArray.mauerArray[WelcheMauer], currentLVL);
-        Debug.Log(WelcheMauer);
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             WallCollider = MauerArray.mauerArray[WelcheMauer][currentLVL].GetComponent<BoxCollider>();
@@ -42,7 +42,7 @@ public class UpgradeMauer : UpgradeBaseKlass
             //SwitchObject(MauerArray.mauerArray[WelcheMauer], currentLVL);
             if (canIUpgrade)
             {
-                Debug.Log("sachen ab ziehen");
+                
                 switch (WelcheMauer)
                 {
                     case 0:
