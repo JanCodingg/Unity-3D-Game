@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68300931891455211}
-  m_LocalRotation: {x: 0, y: 0.96159774, z: 0, w: 0.2744626}
-  m_LocalPosition: {x: 0, y: -0.08, z: -28.72}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2943007, y: 1.2943002, z: 1.2943008}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 148.14001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &68300931888068843
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Baum: {fileID: 9221426515680649004}
   BaumAnimation: {fileID: 6450647388295998070}
+  "Baum_f\xE4llt": {fileID: 0}
 --- !u!64 &9221426515680649004
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class Abbauskript : MonoBehaviour
     private BaumLeben baumleben = new BaumLeben();
     private int Baumleben = 20;
     public Animator BaumAnimation;
+  
 
    
     private void FixedUpdate()
@@ -30,14 +31,27 @@ public class Abbauskript : MonoBehaviour
     private IEnumerator PlayAnimation()
     {
         if (Baumleben <= 0)
-        { 
-            //Setzt den bool um den Baum fallen zu lassen und zerstört den Meshcollider des Baumes
-            BaumAnimation.SetBool("Aktivier_Baumfällt", true);
-            Destroy(Baum);
-            //Wartet 9s 
-            yield return new WaitForSeconds(9f);
-            SaveData.currnet.PlayerData.holz += 5;
-            Destroy(transform.gameObject);
+        {
+            Debug.Log(BaumAnimation.);
+            if(BaumAnimation.name == "parentTree2 (1)")
+            {
+                BaumAnimation.SetBool("Baum_fällt_Aktivieren", true);
+                Destroy(Baum);
+                yield return new WaitForSeconds(9.5f);
+                SaveData.currnet.PlayerData.holz += 5;
+                Destroy(transform.gameObject);
+            }
+            else
+            {
+                //Setzt den bool um den Baum fallen zu lassen und zerstört den Meshcollider des Baumes
+
+                BaumAnimation.SetBool("Aktivier_Baumfällt", true);
+                Destroy(Baum);
+                //Wartet 9s 
+                yield return new WaitForSeconds(9f);
+                SaveData.currnet.PlayerData.holz += 5;
+                Destroy(transform.gameObject);
+            }
         }
     }
 }
