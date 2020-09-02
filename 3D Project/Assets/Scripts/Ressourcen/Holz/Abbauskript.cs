@@ -32,8 +32,9 @@ public class Abbauskript : MonoBehaviour
     {
         if (Baumleben <= 0)
         {
-            Debug.Log(BaumAnimation.);
-            if(BaumAnimation.name == "parentTree2 (1)")
+            string BaumName = BaumAnimation.name.Remove(7);
+            Debug.Log(BaumName);
+            if(BaumName == "Tree_02")
             {
                 BaumAnimation.SetBool("Baum_fällt_Aktivieren", true);
                 Destroy(Baum);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class MauerText : MonoBehaviour
+public class TextFürUpgradebare : MonoBehaviour
 {
     public TextMeshProUGUI Text;
     private int currentLVL;

@@ -12,6 +12,8 @@ public class GlobalAnzeige : MonoBehaviour
     //jetziger Text der angezeigt werden soll
     private int Textnummer;
     private int GetroffenerCollider;
+
+    private MeshCollider Forschungsstation;
     // Start is called before the first frame update
     private void Start()
     {
@@ -49,5 +51,6 @@ public class GlobalAnzeige : MonoBehaviour
                 }
             }
         }
+        
     }
 }

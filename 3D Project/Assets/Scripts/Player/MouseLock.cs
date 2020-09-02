@@ -38,9 +38,16 @@ public class MouseLock : MonoBehaviour
         }
         else
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+            if(ForschungsStation.MenüÖffnen == false)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+                mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
         }
 
         //Minus um die Y Achse zu invertieren/Richtig zu stellen
