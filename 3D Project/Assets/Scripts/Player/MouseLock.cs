@@ -49,7 +49,6 @@ public class MouseLock : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
             }
         }
-
         //Minus um die Y Achse zu invertieren/Richtig zu stellen
         yRotation -= mouseY;
         //Clamp macht das der Wert von yRotation nicht unter -90 oder über 90 geht dadruch kann man sich nicht überdrehen

@@ -5,8 +5,8 @@ using UnityEngine;
 public class ForschungsDaten : MonoBehaviour
 {
     //Forschungsstation freischalten
-    public static int Holz = 200;
-    public static int Stein = 300;
+    public static int Holz = 10;
+    public static int Stein = 10;
 
 
 

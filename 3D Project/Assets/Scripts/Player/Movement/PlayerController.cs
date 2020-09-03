@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     //Variablen für die Bewegung
     public static float speed = 5;
     private float gravity = 16f;
-    public float sprungHöhe = 3f;
+    public static float sprungHöhe = 3f;
     public float verticalVelocity;
 
     public CharacterController controller;

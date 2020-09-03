@@ -33,4 +33,5 @@ public class SaveData
     public Mauer Mauer3 = new Mauer();
     public Mauer Mauer4 = new Mauer();
     public DataForschung Forschungsstation = new DataForschung();
+    
 }

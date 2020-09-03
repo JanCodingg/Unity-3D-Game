@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ForschungsStation : MonoBehaviour
 {
+    private float sprungHöhe = PlayerController.sprungHöhe;
+    private float speed = PlayerController.speed;
     public MeshCollider ColliderStation;
     public GameObject AnzeigeText;
     public static bool MenüÖffnen = false;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,13 @@ public class ForschungsStation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerController.rayCast.collider == ColliderStation && PlayerController.rayCast.distance <= 4)
+        if (Input.GetKeyDown(KeyCode.E) && MenüÖffnen == true)
+        {
+            MenüÖffnen = false;
+            PlayerController.speed = speed;
+            PlayerController.sprungHöhe = sprungHöhe;
+        }
+        if (PlayerController.rayCast.collider == ColliderStation && PlayerController.rayCast.distance <= 4)
         {
             AnzeigeText.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E) && MenüÖffnen == false)
@@ -28,14 +35,19 @@ public class ForschungsStation : MonoBehaviour
                 }
                 else if(SaveData.currnet.Forschungsstation.istEsGebaut == true)
                 {
-                    MenüÖffnen = true;
-                    PlayerController.speed = 0;
+                    if (MenüÖffnen == false)
+                    {
+                        MenüÖffnen = true;
+                        PlayerController.speed = 0;
+                        PlayerController.sprungHöhe = 0;
+                    }
+                    else
+                    {
+                        MenüÖffnen = false;
+                        PlayerController.speed = speed;
+                        PlayerController.sprungHöhe = sprungHöhe;
+                    }
                 }
-            }
-            else if(Input.GetKeyDown(KeyCode.E))
-            {
-                MenüÖffnen = false;
-                PlayerController.speed = 5;
             }
         }
     }

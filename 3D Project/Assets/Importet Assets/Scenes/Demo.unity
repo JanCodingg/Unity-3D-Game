@@ -9655,6 +9655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ee1b2e77ac8f146a660eda7547460c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Forschungsstation: {fileID: 198833599}
   Text: {fileID: 1687559879}
 --- !u!114 &1687559879
 MonoBehaviour:
