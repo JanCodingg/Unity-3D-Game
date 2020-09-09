@@ -18,8 +18,10 @@ public class ForschungsStation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && MenüÖffnen == true)
+        bool Merker = false;
+        if (Input.GetKeyDown(KeyCode.E) && MenüÖffnen == true && Merker == false)
         {
+            Merker = true;
             MenüÖffnen = false;
             PlayerController.speed = speed;
             PlayerController.sprungHöhe = sprungHöhe;
@@ -29,19 +31,19 @@ public class ForschungsStation : MonoBehaviour
             AnzeigeText.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E) && MenüÖffnen == false)
             {
-                if (SaveData.currnet.Forschungsstation.istEsGebaut == false && ForschungsDaten.Holz <= SaveData.currnet.PlayerData.holz && ForschungsDaten.Stein <= SaveData.currnet.PlayerData.stein)
+                if (SaveData.currnet.dataForschung.istEsGebaut == false && ForschungsDaten.Holz <= SaveData.currnet.PlayerData.holz && ForschungsDaten.Stein <= SaveData.currnet.PlayerData.stein)
                 {
-                    SaveData.currnet.Forschungsstation.istEsGebaut = true;
+                    SaveData.currnet.dataForschung.istEsGebaut = true;
                 }
-                else if(SaveData.currnet.Forschungsstation.istEsGebaut == true)
+                else if(SaveData.currnet.dataForschung.istEsGebaut == true)
                 {
-                    if (MenüÖffnen == false)
+                    if (MenüÖffnen == false && Merker == false)
                     {
                         MenüÖffnen = true;
                         PlayerController.speed = 0;
                         PlayerController.sprungHöhe = 0;
                     }
-                    else
+                    else if(MenüÖffnen == true && Merker == false)
                     {
                         MenüÖffnen = false;
                         PlayerController.speed = speed;

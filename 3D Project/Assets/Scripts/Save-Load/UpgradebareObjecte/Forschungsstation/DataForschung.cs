@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class DataForschung 
 {
-    public bool istEsGebaut = false;
+    public bool istEsGebaut;
     public int HolzAbbauLevel = 1;
     public int SteinAbbauLevel = 1;
     public int EisenAbbauLevel = 1;
