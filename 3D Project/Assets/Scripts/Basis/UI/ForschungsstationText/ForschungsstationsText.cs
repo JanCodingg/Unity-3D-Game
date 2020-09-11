@@ -18,7 +18,7 @@ public class ForschungsstationsText : MonoBehaviour
         
         if(PlayerController.rayCast.collider == Forschungsstation && PlayerController.rayCast.distance <= 4)
         {
-            if(SaveData.currnet.dataForschung.istEsGebaut == false)
+            if(SaveData.currnet.dataForschung.istEsGebaut == false && ForschungsStation.MenüÖffnen == false)
             {
                 Text.text = "Press E to build \n Holz: " + ForschungsDaten.Holz + "Stein: " + ForschungsDaten.Stein;
             }
