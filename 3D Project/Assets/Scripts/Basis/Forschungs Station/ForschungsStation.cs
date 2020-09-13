@@ -18,6 +18,7 @@ public class ForschungsStation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         bool Merker = false;
         if (Input.GetKeyDown(KeyCode.E) && MenüÖffnen == true && Merker == false)
         {

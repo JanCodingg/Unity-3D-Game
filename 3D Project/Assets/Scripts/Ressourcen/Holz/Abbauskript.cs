@@ -21,7 +21,7 @@ public class Abbauskript : MonoBehaviour
 
     private void Abbauen()
     {
-        Debug.Log(Baumleben);
+
         if (PlayerController.rayCast.distance < 2 && PlayerController.rayCast.collider == Baum && Input.GetMouseButton(0))
         {
             Baumleben -= 1;
@@ -33,7 +33,7 @@ public class Abbauskript : MonoBehaviour
         if (Baumleben <= 0)
         {
             string BaumName = BaumAnimation.name.Remove(7);
-            Debug.Log(BaumName);
+            
             if(BaumName == "Tree_02")
             {
                 BaumAnimation.SetBool("Baum_fällt_Aktivieren", true);

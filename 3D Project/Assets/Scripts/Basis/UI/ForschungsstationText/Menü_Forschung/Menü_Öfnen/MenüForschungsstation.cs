@@ -4,23 +4,19 @@ using UnityEngine;
 
 public class MenüForschungsstation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject Menü;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Debug.Log(ForschungsStation.MenüÖffnen);
+        
         if(ForschungsStation.MenüÖffnen == true)
         {
-            gameObject.SetActive(true);
+            Menü.SetActive(true);
         }
         else
         {
-            gameObject.SetActive(false);
+            Menü.SetActive(false);
         }
     }
 }
