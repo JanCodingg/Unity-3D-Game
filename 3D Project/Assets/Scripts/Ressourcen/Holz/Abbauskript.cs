@@ -8,11 +8,15 @@ public class Abbauskript : MonoBehaviour
 
     public MeshCollider Baum;
     private BaumLeben baumleben = new BaumLeben();
-    private int Baumleben = 20;
+    
     public Animator BaumAnimation;
-  
+    private int AktuellesLeben;
 
-   
+    private void Start()
+    {
+        baumleben.Lebenbestimmen();
+        AktuellesLeben = baumleben.Leben;
+    }
     private void FixedUpdate()
     {
         Abbauen();
@@ -21,16 +25,23 @@ public class Abbauskript : MonoBehaviour
 
     private void Abbauen()
     {
-
+        
         if (PlayerController.rayCast.distance < 2 && PlayerController.rayCast.collider == Baum && Input.GetMouseButton(0))
         {
-            Baumleben -= 1;
+            
+            if(AktuellesLeben == baumleben.Leben)
+            {
+                baumleben.Lebenbestimmen();
+                AktuellesLeben = baumleben.Leben;
+            }    
+            AktuellesLeben -= 1;
+            Debug.Log(AktuellesLeben);
         }
     }
 
     private IEnumerator PlayAnimation()
     {
-        if (Baumleben <= 0)
+        if (AktuellesLeben <= 0)
         {
             string BaumName = BaumAnimation.name.Remove(7);
             
