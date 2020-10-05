@@ -12,7 +12,7 @@ public class Schießen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && ItemsManager.GegenständeAryStatic[2].activeInHierarchy)
         {
             Feuern(0.2f);
         }

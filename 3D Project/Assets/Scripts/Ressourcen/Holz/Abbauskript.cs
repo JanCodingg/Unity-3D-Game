@@ -26,7 +26,7 @@ public class Abbauskript : MonoBehaviour
     private void Abbauen()
     {
         
-        if (PlayerController.rayCast.distance < 2 && PlayerController.rayCast.collider == Baum && Input.GetMouseButton(0))
+        if (PlayerController.rayCast.distance < 2 && PlayerController.rayCast.collider == Baum && Input.GetMouseButton(0) && ItemsManager.GegenständeAryStatic[0].activeInHierarchy)
         {
             
             if(AktuellesLeben == baumleben.Leben)
