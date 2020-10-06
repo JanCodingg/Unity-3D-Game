@@ -29,6 +29,10 @@ public class Schießen : MonoBehaviour
     private float zwischenspeicher = 0;
     private bool Firerate(float Feuerrate)
     {
+        if(Time.time - zwischenspeicher > Feuerrate)
+        {
+            zwischenspeicher = Time.time - Feuerrate;
+        }
         if (zwischenspeicher <= Time.time)
         {
             zwischenspeicher += Feuerrate;
