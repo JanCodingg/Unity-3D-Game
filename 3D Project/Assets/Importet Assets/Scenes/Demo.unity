@@ -6053,6 +6053,7 @@ GameObject:
   - component: {fileID: 742543015}
   - component: {fileID: 742543019}
   - component: {fileID: 742543020}
+  - component: {fileID: 742543021}
   m_Layer: 0
   m_Name: Gegner
   m_TagString: Untagged
@@ -6170,6 +6171,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Ziel: {fileID: 1633187395}
+--- !u!114 &742543021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742543014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6289868446f0f14c80d28d68c78045c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Patrone: {fileID: 5408202791800574005, guid: 59e7e34b6dd341c48bdfb3d0872d9a91, type: 3}
 --- !u!1001 &749984998
 PrefabInstance:
   m_ObjectHideFlags: 0

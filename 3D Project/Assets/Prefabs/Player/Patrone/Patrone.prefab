@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 894950794103928193}
   - component: {fileID: 6650068117432367309}
   - component: {fileID: 1617355502578622673}
+  - component: {fileID: -2446698711721349959}
   m_Layer: 0
   m_Name: Patrone
   m_TagString: Untagged
@@ -92,3 +93,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e785294457ba249bab5a21117457be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 416002602239383829, guid: bdea885f6378ca04bb8d809800529ec5, type: 3}
+--- !u!64 &-2446698711721349959
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5408202791800574005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
